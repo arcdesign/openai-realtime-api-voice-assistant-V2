@@ -169,10 +169,10 @@ fastify.register(async (fastify) => {
         console.log('Caller Number:', callerNumber);
 
         // Open a WebSocket connection to the OpenAI Realtime API
-        const openAiWs = new WebSocket('wss://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview-2024-10-01', {
+        const openAiWs = new WebSocket('wss://api.openai.com/v1/realtime?model=gpt-4o-mini-realtime-preview-2024-12-17', {
             headers: {
                 Authorization: `Bearer ${OPENAI_API_KEY}`,  // Authorization header with the OpenAI API key
-                "OpenAI-Beta": "realtime=v1"  // Use the beta realtime version
+                //"OpenAI-Beta": "realtime=v1"  // Use the beta realtime version
             }
         });
 
